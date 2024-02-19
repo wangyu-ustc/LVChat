@@ -1,0 +1,542 @@
+{
+  "anno_root_it": "data/anno",
+  "data_path": "data",
+  "available_corpus": {
+    "caption_coco": [
+      "data/anno/image/caption/coco/train.json",
+      "data/coco_caption"
+    ],
+    "caption_llava": [
+      "data/anno/image/caption/llava/train.json",
+      "data/coco_caption"
+    ],
+    "caption_minigpt4": [
+      "data/anno/image/caption/minigpt4/train.json",
+      "data/minigpt4/image"
+    ],
+    "caption_paragraph_captioning": [
+      "data/anno/image/caption/paragraph_captioning/train.json",
+      "data/m3it/image-paragraph-captioning"
+    ],
+    "caption_textcaps": [
+      "data/anno/image/caption/textcaps/train.json",
+      "data/m3it/textcap"
+    ],
+    "classification_imagenet": [
+      "data/anno/image/classification/imagenet/train.json",
+      "data/m3it/imagenet"
+    ],
+    "classification_coco_itm": [
+      "data/anno/image/classification/coco_itm/train.json",
+      "data/m3it/coco-itm"
+    ],
+    "conversation_llava": [
+      "data/anno/image/conversation/llava/train.json",
+      "data/coco_caption"
+    ],
+    "reasoning_clevr": [
+      "data/anno/image/reasoning/clevr/train.json",
+      "data/m3it/clevr"
+    ],
+    "reasoning_visual_mrc": [
+      "data/anno/image/reasoning/visual_mrc/train.json",
+      "data/m3it/visual-mrc"
+    ],
+    "reasoning_llava": [
+      "data/anno/image/reasoning/llava/train.json",
+      "data/coco_caption"
+    ],
+    "vqa_vqav2": [
+      "data/anno/image/vqa/vqav2/train.json",
+      "data/m3it/vqa-v2"
+    ],
+    "vqa_gqa": [
+      "data/anno/image/vqa/gqa/train.json",
+      "data/m3it/gqa"
+    ],
+    "vqa_okvqa": [
+      "data/anno/image/vqa/okvqa/train.json",
+      "data/m3it/okvqa"
+    ],
+    "vqa_a_okvqa": [
+      "data/anno/image/vqa/a_okvqa/train.json",
+      "data/m3it/a-okvqa"
+    ],
+    "vqa_viquae": [
+      "data/anno/image/vqa/viquae/train.json",
+      "data/m3it/viquae"
+    ],
+    "vqa_ocr_vqa": [
+      "data/anno/image/vqa/ocr_vqa/train.json",
+      "data/m3it/ocr-vqa"
+    ],
+    "vqa_text_vqa": [
+      "data/anno/image/vqa/text_vqa/train.json",
+      "data/m3it/text-vqa"
+    ],
+    "vqa_st_vqa": [
+      "data/anno/image/vqa/st_vqa/train.json",
+      "data/m3it/st-vqa"
+    ],
+    "vqa_docvqa": [
+      "data/anno/image/vqa/docvqa/train.json",
+      "data/m3it/docvqa"
+    ],
+    "caption_textvr": [
+      "data/anno/video/caption/textvr/train.json",
+      "data/TextVR/Video",
+      "video"
+    ],
+    "caption_videochat": [
+      "data/anno/video/caption/videochat/train.json",
+      "data/WebVid10M",
+      "video"
+    ],
+    "caption_videochatgpt": [
+      "data/anno/video/caption/videochatgpt/train.json",
+      "data/ANet/activitynet_train_videos_video_chatgpt",
+      "video"
+    ],
+    "caption_webvid": [
+      "data/anno/video/caption/webvid/train.json",
+      "data/WebVid2M",
+      "video"
+    ],
+    "caption_youcook2": [
+      "data/anno/video/caption/youcook2/train.json",
+      "data/youcook2/split_videos",
+      "video"
+    ],
+    "classification_k710": [
+      "data/anno/video/classification/k710/train.json",
+      "",
+      "video"
+    ],
+    "classification_ssv2": [
+      "data/anno/video/classification/ssv2/train.json",
+      "data/video_pub/ssv2_video",
+      "video"
+    ],
+    "conversation_videochat1": [
+      "data/anno/video/conversation/videochat1/train.json",
+      "data/WebVid10M",
+      "video"
+    ],
+    "conversation_videochat2": [
+      "data/anno/video/conversation/videochat2/train.json",
+      "data/internvid-10s",
+      "video"
+    ],
+    "conversation_videochatgpt": [
+      "data/anno/video/conversation/videochatgpt/train.json",
+      "data/ANet/activitynet_train_videos_video_chatgpt",
+      "video"
+    ],
+    "reasoning_next_qa": [
+      "data/anno/video/reasoning/next_qa/train.json",
+      "data/nextqa",
+      "video"
+    ],
+    "reasoning_clevrer_qa": [
+      "data/anno/video/reasoning/clevrer_qa/train.json",
+      "data/clevrer/video_train",
+      "video"
+    ],
+    "reasoning_clevrer_mc": [
+      "data/anno/video/reasoning/clevrer_mc/train.json",
+      "data/clevrer/video_train",
+      "video"
+    ],
+    "vqa_ego_qa": [
+      "data/anno/video/vqa/ego_qa/train.json",
+      "data/EgoQA/split_videos",
+      "video"
+    ],
+    "vqa_tgif_frame_qa": [
+      "data/anno/video/vqa/tgif_frame_qa/train.json",
+      "data/tgif",
+      "video"
+    ],
+    "vqa_tgif_transition_qa": [
+      "data/anno/video/vqa/tgif_transition_qa/train.json",
+      "data/tgif",
+      "video"
+    ],
+    "vqa_webvid_qa": [
+      "data/anno/video/vqa/webvid_qa/train.json",
+      "data/WebVid2M",
+      "video"
+    ],
+    "videochat2_instruction": [
+      [
+        "data/anno/image/caption/coco/train.json",
+        "data/coco_caption"
+      ],
+      [
+        "data/anno/image/caption/llava/train.json",
+        "data/coco_caption"
+      ],
+      [
+        "data/anno/image/caption/minigpt4/train.json",
+        "data/minigpt4/image"
+      ],
+      [
+        "data/anno/image/caption/paragraph_captioning/train.json",
+        "data/m3it/image-paragraph-captioning"
+      ],
+      [
+        "data/anno/image/caption/textcaps/train.json",
+        "data/m3it/textcap"
+      ],
+      [
+        "data/anno/image/classification/imagenet/train.json",
+        "data/m3it/imagenet"
+      ],
+      [
+        "data/anno/image/classification/coco_itm/train.json",
+        "data/m3it/coco-itm"
+      ],
+      [
+        "data/anno/image/conversation/llava/train.json",
+        "data/coco_caption"
+      ],
+      [
+        "data/anno/image/reasoning/clevr/train.json",
+        "data/m3it/clevr"
+      ],
+      [
+        "data/anno/image/reasoning/visual_mrc/train.json",
+        "data/m3it/visual-mrc"
+      ],
+      [
+        "data/anno/image/reasoning/llava/train.json",
+        "data/coco_caption"
+      ],
+      [
+        "data/anno/image/vqa/vqav2/train.json",
+        "data/m3it/vqa-v2"
+      ],
+      [
+        "data/anno/image/vqa/gqa/train.json",
+        "data/m3it/gqa"
+      ],
+      [
+        "data/anno/image/vqa/okvqa/train.json",
+        "data/m3it/okvqa"
+      ],
+      [
+        "data/anno/image/vqa/a_okvqa/train.json",
+        "data/m3it/a-okvqa"
+      ],
+      [
+        "data/anno/image/vqa/viquae/train.json",
+        "data/m3it/viquae"
+      ],
+      [
+        "data/anno/image/vqa/ocr_vqa/train.json",
+        "data/m3it/ocr-vqa"
+      ],
+      [
+        "data/anno/image/vqa/text_vqa/train.json",
+        "data/m3it/text-vqa"
+      ],
+      [
+        "data/anno/image/vqa/st_vqa/train.json",
+        "data/m3it/st-vqa"
+      ],
+      [
+        "data/anno/image/vqa/docvqa/train.json",
+        "data/m3it/docvqa"
+      ],
+      [
+        "data/anno/video/caption/textvr/train.json",
+        "data/TextVR/Video",
+        "video"
+      ],
+      [
+        "data/anno/video/caption/videochat/train.json",
+        "data/WebVid10M",
+        "video"
+      ],
+      [
+        "data/anno/video/caption/webvid/train.json",
+        "data/WebVid2M",
+        "video"
+      ],
+      [
+        "data/anno/video/caption/youcook2/train.json",
+        "data/youcook2/split_videos",
+        "video"
+      ],
+      [
+        "data/anno/video/classification/k710/train.json",
+        "",
+        "video"
+      ],
+      [
+        "data/anno/video/classification/ssv2/train.json",
+        "data/video_pub/ssv2_video",
+        "video"
+      ],
+      [
+        "data/anno/video/conversation/videochat1/train.json",
+        "data/WebVid10M",
+        "video"
+      ],
+      [
+        "data/anno/video/conversation/videochat2/train.json",
+        "data/internvid-10s",
+        "video"
+      ],
+      [
+        "data/anno/video/conversation/videochatgpt/train.json",
+        "data/ANet/activitynet_train_videos_video_chatgpt",
+        "video"
+      ],
+      [
+        "data/anno/video/reasoning/next_qa/train.json",
+        "data/nextqa",
+        "video"
+      ],
+      [
+        "data/anno/video/reasoning/clevrer_qa/train.json",
+        "data/clevrer/video_train",
+        "video"
+      ],
+      [
+        "data/anno/video/reasoning/clevrer_mc/train.json",
+        "data/clevrer/video_train",
+        "video"
+      ],
+      [
+        "data/anno/video/vqa/ego_qa/train.json",
+        "data/EgoQA/split_videos",
+        "video"
+      ],
+      [
+        "data/anno/video/vqa/tgif_frame_qa/train.json",
+        "data/tgif",
+        "video"
+      ],
+      [
+        "data/anno/video/vqa/tgif_transition_qa/train.json",
+        "data/tgif",
+        "video"
+      ],
+      [
+        "data/anno/video/vqa/webvid_qa/train.json",
+        "data/WebVid2M",
+        "video"
+      ]
+    ],
+    "videochat2_instruction_stage4": [
+      [
+        "data/anno/video/conversation/videochat1/train.json",
+        "data/WebVid10M",
+        "video"
+      ],
+      [
+        "data/anno/video/conversation/videochat2/train.json",
+        "data/internvid-10s",
+        "video"
+      ],
+      [
+        "data/anno/video/conversation/videochatgpt/train.json",
+        "data/ANet/activitynet_train_videos_video_chatgpt",
+        "video"
+      ],
+      [
+        "data/anno/video/caption/videochat/train.json",
+        "data/WebVid10M",
+        "video"
+      ],
+      [
+        "data/anno/video/reasoning/clevrer_qa/train.json",
+        "data/clevrer/video_train",
+        "video"
+      ],
+      [
+        "data/anno/video/reasoning/clevrer_mc/train.json",
+        "data/clevrer/video_train",
+        "video"
+      ],
+      [
+        "data/anno/video/reasoning/next_qa/train.json",
+        "data/nextqa",
+        "video"
+      ]
+    ]
+  },
+  "train_corpus": "videochat2_instruction_stage4",
+  "train_file": [
+    [
+      "data/anno/video/conversation/videochat1/train.json",
+      "data/WebVid10M",
+      "video"
+    ],
+    [
+      "data/anno/video/conversation/videochat2/train.json",
+      "data/internvid-10s",
+      "video"
+    ],
+    [
+      "data/anno/video/conversation/videochatgpt/train.json",
+      "data/ANet/activitynet_train_videos_video_chatgpt",
+      "video"
+    ],
+    [
+      "data/anno/video/caption/videochat/train.json",
+      "data/WebVid10M",
+      "video"
+    ],
+    [
+      "data/anno/video/reasoning/clevrer_qa/train.json",
+      "data/clevrer/video_train",
+      "video"
+    ],
+    [
+      "data/anno/video/reasoning/clevrer_mc/train.json",
+      "data/clevrer/video_train",
+      "video"
+    ],
+    [
+      "data/anno/video/reasoning/next_qa/train.json",
+      "data/nextqa",
+      "video"
+    ]
+  ],
+  "test_file": {},
+  "test_types": [],
+  "num_workers": 6,
+  "stop_key": null,
+  "num_frames": 160,
+  "base_frame_num": 16,
+  "random_frames": false,
+  "num_frames_test": 160,
+  "batch_size": 1,
+  "max_txt_l": 512,
+  "pre_text": false,
+  "inputs": {
+    "image_res": 224,
+    "video_input": {
+      "num_frames": 160,
+      "sample_type": "rand",
+      "num_frames_test": 160,
+      "sample_type_test": "middle",
+      "random_aug": false
+    },
+    "max_txt_l": {
+      "image": 512,
+      "video": 512
+    },
+    "batch_size": {
+      "image": 1,
+      "video": 1
+    },
+    "batch_size_test": {
+      "image": 1,
+      "video": 1
+    }
+  },
+  "model": {
+    "model_cls": "VideoChat2_it_Long",
+    "vit_blip_model_path": "video_models/umt_l16_qformer.pth",
+    "llama_model_path": "video_models/vicuna-7b-v0",
+    "videochat2_model_path": "video_models/videochat2_7b_stage3.pth",
+    "freeze_vit": true,
+    "freeze_qformer": true,
+    "max_txt_len": 512,
+    "low_resource": false,
+    "add_temp_embed": false,
+    "vision_encoder": {
+      "name": "vit_l14",
+      "img_size": 224,
+      "patch_size": 16,
+      "d_model": 1024,
+      "encoder_embed_dim": 1024,
+      "encoder_depth": 24,
+      "encoder_num_heads": 16,
+      "drop_path_rate": 0.0,
+      "num_frames": 16,
+      "tubelet_size": 1,
+      "use_checkpoint": false,
+      "checkpoint_num": 0,
+      "pretrained": "",
+      "return_index": -2,
+      "vit_add_ln": true,
+      "ckpt_num_frame": 4
+    },
+    "num_query_token": 32,
+    "qformer_hidden_dropout_prob": 0.1,
+    "qformer_attention_probs_dropout_prob": 0.1,
+    "qformer_drop_path_rate": 0.2,
+    "extra_num_query_token": 64,
+    "qformer_text_input": false,
+    "system": "",
+    "start_token": "<Video>",
+    "end_token": "</Video>",
+    "add_second_msg": false,
+    "img_start_token": "<Image>",
+    "img_end_token": "</Image>",
+    "random_shuffle": true,
+    "use_flash_attention": false,
+    "use_lora": true,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "base_frame_num": 16
+  },
+  "optimizer": {
+    "opt": "adamW",
+    "lr": 2e-06,
+    "opt_betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.02,
+    "max_grad_norm": -1,
+    "different_lr": {
+      "enable": false,
+      "module_names": [],
+      "lr": 0.001
+    }
+  },
+  "scheduler": {
+    "sched": "cosine",
+    "epochs": 3,
+    "min_lr_multi": 0.25,
+    "warmup_epochs": 0.3
+  },
+  "evaluate": false,
+  "deep_fusion": false,
+  "evaluation": {
+    "eval_frame_ensemble": "concat",
+    "eval_x_only": false,
+    "k_test": 128,
+    "eval_offload": true
+  },
+  "fp16": true,
+  "gradient_checkpointing": true,
+  "wandb": {
+    "enable": false,
+    "entity": "user",
+    "project": "videochat2"
+  },
+  "dist_url": "env://",
+  "device": "cuda",
+  "mode": "it",
+  "resume": false,
+  "debug": false,
+  "log_freq": 100,
+  "eval_freq": 5000,
+  "seed": 42,
+  "save_latest": true,
+  "auto_resume": true,
+  "pretrained_path": "",
+  "output_dir": "output/7b_stage4",
+  "rank": 0,
+  "world_size": 1,
+  "gpu": 0,
+  "distributed": true,
+  "dist_backend": "nccl"
+}

@@ -1,0 +1,780 @@
+2024-02-18T22:26:13 | INFO | vindlu : Logging to: output/7b_stage4/train.log
+2024-02-18T22:26:13 | INFO | utils.config_utils : config: {
+  anno_root_it: data/anno
+  data_path: data
+  available_corpus: {
+      caption_coco: ['data/anno/image/caption/coco/train.json', 'data/coco_caption']
+      caption_llava: ['data/anno/image/caption/llava/train.json', 'data/coco_caption']
+      caption_minigpt4: ['data/anno/image/caption/minigpt4/train.json', 'data/minigpt4/image']
+      caption_paragraph_captioning: ['data/anno/image/caption/paragraph_captioning/train.json', 'data/m3it/image-paragraph-captioning']
+      caption_textcaps: ['data/anno/image/caption/textcaps/train.json', 'data/m3it/textcap']
+      classification_imagenet: ['data/anno/image/classification/imagenet/train.json', 'data/m3it/imagenet']
+      classification_coco_itm: ['data/anno/image/classification/coco_itm/train.json', 'data/m3it/coco-itm']
+      conversation_llava: ['data/anno/image/conversation/llava/train.json', 'data/coco_caption']
+      reasoning_clevr: ['data/anno/image/reasoning/clevr/train.json', 'data/m3it/clevr']
+      reasoning_visual_mrc: ['data/anno/image/reasoning/visual_mrc/train.json', 'data/m3it/visual-mrc']
+      reasoning_llava: ['data/anno/image/reasoning/llava/train.json', 'data/coco_caption']
+      vqa_vqav2: ['data/anno/image/vqa/vqav2/train.json', 'data/m3it/vqa-v2']
+      vqa_gqa: ['data/anno/image/vqa/gqa/train.json', 'data/m3it/gqa']
+      vqa_okvqa: ['data/anno/image/vqa/okvqa/train.json', 'data/m3it/okvqa']
+      vqa_a_okvqa: ['data/anno/image/vqa/a_okvqa/train.json', 'data/m3it/a-okvqa']
+      vqa_viquae: ['data/anno/image/vqa/viquae/train.json', 'data/m3it/viquae']
+      vqa_ocr_vqa: ['data/anno/image/vqa/ocr_vqa/train.json', 'data/m3it/ocr-vqa']
+      vqa_text_vqa: ['data/anno/image/vqa/text_vqa/train.json', 'data/m3it/text-vqa']
+      vqa_st_vqa: ['data/anno/image/vqa/st_vqa/train.json', 'data/m3it/st-vqa']
+      vqa_docvqa: ['data/anno/image/vqa/docvqa/train.json', 'data/m3it/docvqa']
+      caption_textvr: ['data/anno/video/caption/textvr/train.json', 'data/TextVR/Video', 'video']
+      caption_videochat: ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video']
+      caption_videochatgpt: ['data/anno/video/caption/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+      caption_webvid: ['data/anno/video/caption/webvid/train.json', 'data/WebVid2M', 'video']
+      caption_youcook2: ['data/anno/video/caption/youcook2/train.json', 'data/youcook2/split_videos', 'video']
+      classification_k710: ['data/anno/video/classification/k710/train.json', '', 'video']
+      classification_ssv2: ['data/anno/video/classification/ssv2/train.json', 'data/video_pub/ssv2_video', 'video']
+      conversation_videochat1: ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video']
+      conversation_videochat2: ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video']
+      conversation_videochatgpt: ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+      reasoning_next_qa: ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']
+      reasoning_clevrer_qa: ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video']
+      reasoning_clevrer_mc: ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video']
+      vqa_ego_qa: ['data/anno/video/vqa/ego_qa/train.json', 'data/EgoQA/split_videos', 'video']
+      vqa_tgif_frame_qa: ['data/anno/video/vqa/tgif_frame_qa/train.json', 'data/tgif', 'video']
+      vqa_tgif_transition_qa: ['data/anno/video/vqa/tgif_transition_qa/train.json', 'data/tgif', 'video']
+      vqa_webvid_qa: ['data/anno/video/vqa/webvid_qa/train.json', 'data/WebVid2M', 'video']
+      videochat2_instruction: [['data/anno/image/caption/coco/train.json', 'data/coco_caption'], ['data/anno/image/caption/llava/train.json', 'data/coco_caption'], ['data/anno/image/caption/minigpt4/train.json', 'data/minigpt4/image'], ['data/anno/image/caption/paragraph_captioning/train.json', 'data/m3it/image-paragraph-captioning'], ['data/anno/image/caption/textcaps/train.json', 'data/m3it/textcap'], ['data/anno/image/classification/imagenet/train.json', 'data/m3it/imagenet'], ['data/anno/image/classification/coco_itm/train.json', 'data/m3it/coco-itm'], ['data/anno/image/conversation/llava/train.json', 'data/coco_caption'], ['data/anno/image/reasoning/clevr/train.json', 'data/m3it/clevr'], ['data/anno/image/reasoning/visual_mrc/train.json', 'data/m3it/visual-mrc'], ['data/anno/image/reasoning/llava/train.json', 'data/coco_caption'], ['data/anno/image/vqa/vqav2/train.json', 'data/m3it/vqa-v2'], ['data/anno/image/vqa/gqa/train.json', 'data/m3it/gqa'], ['data/anno/image/vqa/okvqa/train.json', 'data/m3it/okvqa'], ['data/anno/image/vqa/a_okvqa/train.json', 'data/m3it/a-okvqa'], ['data/anno/image/vqa/viquae/train.json', 'data/m3it/viquae'], ['data/anno/image/vqa/ocr_vqa/train.json', 'data/m3it/ocr-vqa'], ['data/anno/image/vqa/text_vqa/train.json', 'data/m3it/text-vqa'], ['data/anno/image/vqa/st_vqa/train.json', 'data/m3it/st-vqa'], ['data/anno/image/vqa/docvqa/train.json', 'data/m3it/docvqa'], ['data/anno/video/caption/textvr/train.json', 'data/TextVR/Video', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/caption/webvid/train.json', 'data/WebVid2M', 'video'], ['data/anno/video/caption/youcook2/train.json', 'data/youcook2/split_videos', 'video'], ['data/anno/video/classification/k710/train.json', '', 'video'], ['data/anno/video/classification/ssv2/train.json', 'data/video_pub/ssv2_video', 'video'], ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/vqa/ego_qa/train.json', 'data/EgoQA/split_videos', 'video'], ['data/anno/video/vqa/tgif_frame_qa/train.json', 'data/tgif', 'video'], ['data/anno/video/vqa/tgif_transition_qa/train.json', 'data/tgif', 'video'], ['data/anno/video/vqa/webvid_qa/train.json', 'data/WebVid2M', 'video']]
+      videochat2_instruction_stage4: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']] }
+  train_corpus: videochat2_instruction_stage4
+  train_file: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']]
+  test_file: {
+
+  test_types: []
+  num_workers: 6
+  stop_key: None
+  num_frames: 96
+  base_frame_num: 16
+  random_frames: False
+  num_frames_test: 96
+  batch_size: 1
+  max_txt_l: 512
+  max_interleave_times: 3
+  pre_text: False
+  inputs: {
+      image_res: 224
+      video_input: {
+          num_frames: 96
+          sample_type: rand
+          num_frames_test: 96
+          sample_type_test: middle
+          random_aug: False }
+      max_txt_l: {
+          image: 512
+          video: 512 }
+      batch_size: {
+          image: 1
+          video: 1 }
+      batch_size_test: {
+          image: 1
+          video: 1 } }
+  model: {
+      model_cls: VideoChat2_it_Long
+      vit_blip_model_path: video_models/umt_l16_qformer.pth
+      llama_model_path: video_models/vicuna-7b-v0
+      videochat2_model_path: video_models/videochat2_7b_stage3.pth
+      freeze_vit: True
+      freeze_qformer: True
+      max_txt_len: 512
+      low_resource: False
+      add_temp_embed: False
+      vision_encoder: {
+          name: vit_l14
+          img_size: 224
+          patch_size: 16
+          d_model: 1024
+          encoder_embed_dim: 1024
+          encoder_depth: 24
+          encoder_num_heads: 16
+          drop_path_rate: 0.0
+          num_frames: 16
+          tubelet_size: 1
+          use_checkpoint: False
+          checkpoint_num: 0
+          pretrained: 
+          return_index: -2
+          vit_add_ln: True
+          ckpt_num_frame: 4 }
+      num_query_token: 32
+      qformer_hidden_dropout_prob: 0.1
+      qformer_attention_probs_dropout_prob: 0.1
+      qformer_drop_path_rate: 0.2
+      extra_num_query_token: 64
+      qformer_text_input: False
+      system: 
+      start_token: <Video>
+      end_token: </Video>
+      add_second_msg: False
+      img_start_token: <Image>
+      img_end_token: </Image>
+      random_shuffle: True
+      remove_content_in_mc: True
+      use_flash_attention: False
+      use_lora: True
+      lora_r: 16
+      lora_alpha: 32
+      lora_dropout: 0.1
+      base_frame_num: 16 }
+  optimizer: {
+      opt: adamW
+      lr: 2e-06
+      opt_betas: [0.9, 0.999]
+      weight_decay: 0.02
+      max_grad_norm: -1
+      different_lr: {
+          enable: False
+          module_names: []
+          lr: 0.001 } }
+  scheduler: {
+      sched: cosine
+      epochs: 3
+      min_lr_multi: 0.25
+      warmup_epochs: 0.3 }
+  evaluate: False
+  deep_fusion: False
+  evaluation: {
+      eval_frame_ensemble: concat
+      eval_x_only: False
+      k_test: 128
+      eval_offload: True }
+  fp16: True
+  gradient_checkpointing: True
+  wandb: {
+      enable: False
+      entity: user
+      project: lvchat }
+  dist_url: env://
+  device: cuda
+  mode: it
+  resume: False
+  debug: False
+  log_freq: 100
+  eval_freq: 2000
+  seed: 42
+  save_latest: True
+  auto_resume: True
+  pretrained_path: 
+  output_dir: output/7b_stage4
+  rank: 0
+  world_size: 1
+  gpu: 0
+  distributed: True
+  dist_backend: nccl }
+2024-02-18T22:26:13 | INFO | __main__ : train_file: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']]
+2024-02-18T22:26:13 | INFO | __main__ : Creating dataset for it
+2024-02-18T22:28:15 | INFO | vindlu : Logging to: output/7b_stage4/train.log
+2024-02-18T22:28:15 | INFO | utils.config_utils : config: {
+  anno_root_it: data/anno
+  data_path: data
+  available_corpus: {
+      caption_coco: ['data/anno/image/caption/coco/train.json', 'data/coco_caption']
+      caption_llava: ['data/anno/image/caption/llava/train.json', 'data/coco_caption']
+      caption_minigpt4: ['data/anno/image/caption/minigpt4/train.json', 'data/minigpt4/image']
+      caption_paragraph_captioning: ['data/anno/image/caption/paragraph_captioning/train.json', 'data/m3it/image-paragraph-captioning']
+      caption_textcaps: ['data/anno/image/caption/textcaps/train.json', 'data/m3it/textcap']
+      classification_imagenet: ['data/anno/image/classification/imagenet/train.json', 'data/m3it/imagenet']
+      classification_coco_itm: ['data/anno/image/classification/coco_itm/train.json', 'data/m3it/coco-itm']
+      conversation_llava: ['data/anno/image/conversation/llava/train.json', 'data/coco_caption']
+      reasoning_clevr: ['data/anno/image/reasoning/clevr/train.json', 'data/m3it/clevr']
+      reasoning_visual_mrc: ['data/anno/image/reasoning/visual_mrc/train.json', 'data/m3it/visual-mrc']
+      reasoning_llava: ['data/anno/image/reasoning/llava/train.json', 'data/coco_caption']
+      vqa_vqav2: ['data/anno/image/vqa/vqav2/train.json', 'data/m3it/vqa-v2']
+      vqa_gqa: ['data/anno/image/vqa/gqa/train.json', 'data/m3it/gqa']
+      vqa_okvqa: ['data/anno/image/vqa/okvqa/train.json', 'data/m3it/okvqa']
+      vqa_a_okvqa: ['data/anno/image/vqa/a_okvqa/train.json', 'data/m3it/a-okvqa']
+      vqa_viquae: ['data/anno/image/vqa/viquae/train.json', 'data/m3it/viquae']
+      vqa_ocr_vqa: ['data/anno/image/vqa/ocr_vqa/train.json', 'data/m3it/ocr-vqa']
+      vqa_text_vqa: ['data/anno/image/vqa/text_vqa/train.json', 'data/m3it/text-vqa']
+      vqa_st_vqa: ['data/anno/image/vqa/st_vqa/train.json', 'data/m3it/st-vqa']
+      vqa_docvqa: ['data/anno/image/vqa/docvqa/train.json', 'data/m3it/docvqa']
+      caption_textvr: ['data/anno/video/caption/textvr/train.json', 'data/TextVR/Video', 'video']
+      caption_videochat: ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video']
+      caption_videochatgpt: ['data/anno/video/caption/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+      caption_webvid: ['data/anno/video/caption/webvid/train.json', 'data/WebVid2M', 'video']
+      caption_youcook2: ['data/anno/video/caption/youcook2/train.json', 'data/youcook2/split_videos', 'video']
+      classification_k710: ['data/anno/video/classification/k710/train.json', '', 'video']
+      classification_ssv2: ['data/anno/video/classification/ssv2/train.json', 'data/video_pub/ssv2_video', 'video']
+      conversation_videochat1: ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video']
+      conversation_videochat2: ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video']
+      conversation_videochatgpt: ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+      reasoning_next_qa: ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']
+      reasoning_clevrer_qa: ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video']
+      reasoning_clevrer_mc: ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video']
+      vqa_ego_qa: ['data/anno/video/vqa/ego_qa/train.json', 'data/EgoQA/split_videos', 'video']
+      vqa_tgif_frame_qa: ['data/anno/video/vqa/tgif_frame_qa/train.json', 'data/tgif', 'video']
+      vqa_tgif_transition_qa: ['data/anno/video/vqa/tgif_transition_qa/train.json', 'data/tgif', 'video']
+      vqa_webvid_qa: ['data/anno/video/vqa/webvid_qa/train.json', 'data/WebVid2M', 'video']
+      videochat2_instruction: [['data/anno/image/caption/coco/train.json', 'data/coco_caption'], ['data/anno/image/caption/llava/train.json', 'data/coco_caption'], ['data/anno/image/caption/minigpt4/train.json', 'data/minigpt4/image'], ['data/anno/image/caption/paragraph_captioning/train.json', 'data/m3it/image-paragraph-captioning'], ['data/anno/image/caption/textcaps/train.json', 'data/m3it/textcap'], ['data/anno/image/classification/imagenet/train.json', 'data/m3it/imagenet'], ['data/anno/image/classification/coco_itm/train.json', 'data/m3it/coco-itm'], ['data/anno/image/conversation/llava/train.json', 'data/coco_caption'], ['data/anno/image/reasoning/clevr/train.json', 'data/m3it/clevr'], ['data/anno/image/reasoning/visual_mrc/train.json', 'data/m3it/visual-mrc'], ['data/anno/image/reasoning/llava/train.json', 'data/coco_caption'], ['data/anno/image/vqa/vqav2/train.json', 'data/m3it/vqa-v2'], ['data/anno/image/vqa/gqa/train.json', 'data/m3it/gqa'], ['data/anno/image/vqa/okvqa/train.json', 'data/m3it/okvqa'], ['data/anno/image/vqa/a_okvqa/train.json', 'data/m3it/a-okvqa'], ['data/anno/image/vqa/viquae/train.json', 'data/m3it/viquae'], ['data/anno/image/vqa/ocr_vqa/train.json', 'data/m3it/ocr-vqa'], ['data/anno/image/vqa/text_vqa/train.json', 'data/m3it/text-vqa'], ['data/anno/image/vqa/st_vqa/train.json', 'data/m3it/st-vqa'], ['data/anno/image/vqa/docvqa/train.json', 'data/m3it/docvqa'], ['data/anno/video/caption/textvr/train.json', 'data/TextVR/Video', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/caption/webvid/train.json', 'data/WebVid2M', 'video'], ['data/anno/video/caption/youcook2/train.json', 'data/youcook2/split_videos', 'video'], ['data/anno/video/classification/k710/train.json', '', 'video'], ['data/anno/video/classification/ssv2/train.json', 'data/video_pub/ssv2_video', 'video'], ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/vqa/ego_qa/train.json', 'data/EgoQA/split_videos', 'video'], ['data/anno/video/vqa/tgif_frame_qa/train.json', 'data/tgif', 'video'], ['data/anno/video/vqa/tgif_transition_qa/train.json', 'data/tgif', 'video'], ['data/anno/video/vqa/webvid_qa/train.json', 'data/WebVid2M', 'video']]
+      videochat2_instruction_stage4: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']] }
+  train_corpus: videochat2_instruction_stage4
+  train_file: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']]
+  test_file: {
+
+  test_types: []
+  num_workers: 6
+  stop_key: None
+  num_frames: 160
+  base_frame_num: 16
+  random_frames: False
+  num_frames_test: 160
+  batch_size: 1
+  max_txt_l: 512
+  pre_text: False
+  inputs: {
+      image_res: 224
+      video_input: {
+          num_frames: 160
+          sample_type: rand
+          num_frames_test: 160
+          sample_type_test: middle
+          random_aug: False }
+      max_txt_l: {
+          image: 512
+          video: 512 }
+      batch_size: {
+          image: 1
+          video: 1 }
+      batch_size_test: {
+          image: 1
+          video: 1 } }
+  model: {
+      model_cls: VideoChat2_it_Long
+      vit_blip_model_path: video_models/umt_l16_qformer.pth
+      llama_model_path: video_models/vicuna-7b-v0
+      videochat2_model_path: video_models/videochat2_7b_stage3.pth
+      freeze_vit: True
+      freeze_qformer: True
+      max_txt_len: 512
+      low_resource: False
+      add_temp_embed: False
+      vision_encoder: {
+          name: vit_l14
+          img_size: 224
+          patch_size: 16
+          d_model: 1024
+          encoder_embed_dim: 1024
+          encoder_depth: 24
+          encoder_num_heads: 16
+          drop_path_rate: 0.0
+          num_frames: 16
+          tubelet_size: 1
+          use_checkpoint: False
+          checkpoint_num: 0
+          pretrained: 
+          return_index: -2
+          vit_add_ln: True
+          ckpt_num_frame: 4 }
+      num_query_token: 32
+      qformer_hidden_dropout_prob: 0.1
+      qformer_attention_probs_dropout_prob: 0.1
+      qformer_drop_path_rate: 0.2
+      extra_num_query_token: 64
+      qformer_text_input: False
+      system: 
+      start_token: <Video>
+      end_token: </Video>
+      add_second_msg: False
+      img_start_token: <Image>
+      img_end_token: </Image>
+      random_shuffle: True
+      use_flash_attention: False
+      use_lora: True
+      lora_r: 16
+      lora_alpha: 32
+      lora_dropout: 0.1
+      base_frame_num: 16 }
+  optimizer: {
+      opt: adamW
+      lr: 2e-06
+      opt_betas: [0.9, 0.999]
+      weight_decay: 0.02
+      max_grad_norm: -1
+      different_lr: {
+          enable: False
+          module_names: []
+          lr: 0.001 } }
+  scheduler: {
+      sched: cosine
+      epochs: 3
+      min_lr_multi: 0.25
+      warmup_epochs: 0.3 }
+  evaluate: False
+  deep_fusion: False
+  evaluation: {
+      eval_frame_ensemble: concat
+      eval_x_only: False
+      k_test: 128
+      eval_offload: True }
+  fp16: True
+  gradient_checkpointing: True
+  wandb: {
+      enable: False
+      entity: user
+      project: videochat2 }
+  dist_url: env://
+  device: cuda
+  mode: it
+  resume: False
+  debug: False
+  log_freq: 100
+  eval_freq: 5000
+  seed: 42
+  save_latest: True
+  auto_resume: True
+  pretrained_path: 
+  output_dir: output/7b_stage4
+  rank: 0
+  world_size: 1
+  gpu: 0
+  distributed: True
+  dist_backend: nccl }
+2024-02-18T22:28:15 | INFO | __main__ : train_file: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']]
+2024-02-18T22:28:15 | INFO | __main__ : Creating dataset for it
+2024-02-18T22:28:53 | INFO | vindlu : Logging to: output/7b_stage4/train.log
+2024-02-18T22:28:53 | INFO | utils.config_utils : config: {
+  anno_root_it: data/anno
+  data_path: data
+  available_corpus: {
+      caption_coco: ['data/anno/image/caption/coco/train.json', 'data/coco_caption']
+      caption_llava: ['data/anno/image/caption/llava/train.json', 'data/coco_caption']
+      caption_minigpt4: ['data/anno/image/caption/minigpt4/train.json', 'data/minigpt4/image']
+      caption_paragraph_captioning: ['data/anno/image/caption/paragraph_captioning/train.json', 'data/m3it/image-paragraph-captioning']
+      caption_textcaps: ['data/anno/image/caption/textcaps/train.json', 'data/m3it/textcap']
+      classification_imagenet: ['data/anno/image/classification/imagenet/train.json', 'data/m3it/imagenet']
+      classification_coco_itm: ['data/anno/image/classification/coco_itm/train.json', 'data/m3it/coco-itm']
+      conversation_llava: ['data/anno/image/conversation/llava/train.json', 'data/coco_caption']
+      reasoning_clevr: ['data/anno/image/reasoning/clevr/train.json', 'data/m3it/clevr']
+      reasoning_visual_mrc: ['data/anno/image/reasoning/visual_mrc/train.json', 'data/m3it/visual-mrc']
+      reasoning_llava: ['data/anno/image/reasoning/llava/train.json', 'data/coco_caption']
+      vqa_vqav2: ['data/anno/image/vqa/vqav2/train.json', 'data/m3it/vqa-v2']
+      vqa_gqa: ['data/anno/image/vqa/gqa/train.json', 'data/m3it/gqa']
+      vqa_okvqa: ['data/anno/image/vqa/okvqa/train.json', 'data/m3it/okvqa']
+      vqa_a_okvqa: ['data/anno/image/vqa/a_okvqa/train.json', 'data/m3it/a-okvqa']
+      vqa_viquae: ['data/anno/image/vqa/viquae/train.json', 'data/m3it/viquae']
+      vqa_ocr_vqa: ['data/anno/image/vqa/ocr_vqa/train.json', 'data/m3it/ocr-vqa']
+      vqa_text_vqa: ['data/anno/image/vqa/text_vqa/train.json', 'data/m3it/text-vqa']
+      vqa_st_vqa: ['data/anno/image/vqa/st_vqa/train.json', 'data/m3it/st-vqa']
+      vqa_docvqa: ['data/anno/image/vqa/docvqa/train.json', 'data/m3it/docvqa']
+      caption_textvr: ['data/anno/video/caption/textvr/train.json', 'data/TextVR/Video', 'video']
+      caption_videochat: ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video']
+      caption_videochatgpt: ['data/anno/video/caption/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+      caption_webvid: ['data/anno/video/caption/webvid/train.json', 'data/WebVid2M', 'video']
+      caption_youcook2: ['data/anno/video/caption/youcook2/train.json', 'data/youcook2/split_videos', 'video']
+      classification_k710: ['data/anno/video/classification/k710/train.json', '', 'video']
+      classification_ssv2: ['data/anno/video/classification/ssv2/train.json', 'data/video_pub/ssv2_video', 'video']
+      conversation_videochat1: ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video']
+      conversation_videochat2: ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video']
+      conversation_videochatgpt: ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+      reasoning_next_qa: ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']
+      reasoning_clevrer_qa: ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video']
+      reasoning_clevrer_mc: ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video']
+      vqa_ego_qa: ['data/anno/video/vqa/ego_qa/train.json', 'data/EgoQA/split_videos', 'video']
+      vqa_tgif_frame_qa: ['data/anno/video/vqa/tgif_frame_qa/train.json', 'data/tgif', 'video']
+      vqa_tgif_transition_qa: ['data/anno/video/vqa/tgif_transition_qa/train.json', 'data/tgif', 'video']
+      vqa_webvid_qa: ['data/anno/video/vqa/webvid_qa/train.json', 'data/WebVid2M', 'video']
+      videochat2_instruction: [['data/anno/image/caption/coco/train.json', 'data/coco_caption'], ['data/anno/image/caption/llava/train.json', 'data/coco_caption'], ['data/anno/image/caption/minigpt4/train.json', 'data/minigpt4/image'], ['data/anno/image/caption/paragraph_captioning/train.json', 'data/m3it/image-paragraph-captioning'], ['data/anno/image/caption/textcaps/train.json', 'data/m3it/textcap'], ['data/anno/image/classification/imagenet/train.json', 'data/m3it/imagenet'], ['data/anno/image/classification/coco_itm/train.json', 'data/m3it/coco-itm'], ['data/anno/image/conversation/llava/train.json', 'data/coco_caption'], ['data/anno/image/reasoning/clevr/train.json', 'data/m3it/clevr'], ['data/anno/image/reasoning/visual_mrc/train.json', 'data/m3it/visual-mrc'], ['data/anno/image/reasoning/llava/train.json', 'data/coco_caption'], ['data/anno/image/vqa/vqav2/train.json', 'data/m3it/vqa-v2'], ['data/anno/image/vqa/gqa/train.json', 'data/m3it/gqa'], ['data/anno/image/vqa/okvqa/train.json', 'data/m3it/okvqa'], ['data/anno/image/vqa/a_okvqa/train.json', 'data/m3it/a-okvqa'], ['data/anno/image/vqa/viquae/train.json', 'data/m3it/viquae'], ['data/anno/image/vqa/ocr_vqa/train.json', 'data/m3it/ocr-vqa'], ['data/anno/image/vqa/text_vqa/train.json', 'data/m3it/text-vqa'], ['data/anno/image/vqa/st_vqa/train.json', 'data/m3it/st-vqa'], ['data/anno/image/vqa/docvqa/train.json', 'data/m3it/docvqa'], ['data/anno/video/caption/textvr/train.json', 'data/TextVR/Video', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/caption/webvid/train.json', 'data/WebVid2M', 'video'], ['data/anno/video/caption/youcook2/train.json', 'data/youcook2/split_videos', 'video'], ['data/anno/video/classification/k710/train.json', '', 'video'], ['data/anno/video/classification/ssv2/train.json', 'data/video_pub/ssv2_video', 'video'], ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/vqa/ego_qa/train.json', 'data/EgoQA/split_videos', 'video'], ['data/anno/video/vqa/tgif_frame_qa/train.json', 'data/tgif', 'video'], ['data/anno/video/vqa/tgif_transition_qa/train.json', 'data/tgif', 'video'], ['data/anno/video/vqa/webvid_qa/train.json', 'data/WebVid2M', 'video']]
+      videochat2_instruction_stage4: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']] }
+  train_corpus: videochat2_instruction_stage4
+  train_file: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']]
+  test_file: {
+
+  test_types: []
+  num_workers: 6
+  stop_key: None
+  num_frames: 160
+  base_frame_num: 16
+  random_frames: False
+  num_frames_test: 160
+  batch_size: 1
+  max_txt_l: 512
+  pre_text: False
+  inputs: {
+      image_res: 224
+      video_input: {
+          num_frames: 160
+          sample_type: rand
+          num_frames_test: 160
+          sample_type_test: middle
+          random_aug: False }
+      max_txt_l: {
+          image: 512
+          video: 512 }
+      batch_size: {
+          image: 1
+          video: 1 }
+      batch_size_test: {
+          image: 1
+          video: 1 } }
+  model: {
+      model_cls: VideoChat2_it_Long
+      vit_blip_model_path: video_models/umt_l16_qformer.pth
+      llama_model_path: video_models/vicuna-7b-v0
+      videochat2_model_path: video_models/videochat2_7b_stage3.pth
+      freeze_vit: True
+      freeze_qformer: True
+      max_txt_len: 512
+      low_resource: False
+      add_temp_embed: False
+      vision_encoder: {
+          name: vit_l14
+          img_size: 224
+          patch_size: 16
+          d_model: 1024
+          encoder_embed_dim: 1024
+          encoder_depth: 24
+          encoder_num_heads: 16
+          drop_path_rate: 0.0
+          num_frames: 16
+          tubelet_size: 1
+          use_checkpoint: False
+          checkpoint_num: 0
+          pretrained: 
+          return_index: -2
+          vit_add_ln: True
+          ckpt_num_frame: 4 }
+      num_query_token: 32
+      qformer_hidden_dropout_prob: 0.1
+      qformer_attention_probs_dropout_prob: 0.1
+      qformer_drop_path_rate: 0.2
+      extra_num_query_token: 64
+      qformer_text_input: False
+      system: 
+      start_token: <Video>
+      end_token: </Video>
+      add_second_msg: False
+      img_start_token: <Image>
+      img_end_token: </Image>
+      random_shuffle: True
+      use_flash_attention: False
+      use_lora: True
+      lora_r: 16
+      lora_alpha: 32
+      lora_dropout: 0.1
+      base_frame_num: 16 }
+  optimizer: {
+      opt: adamW
+      lr: 2e-06
+      opt_betas: [0.9, 0.999]
+      weight_decay: 0.02
+      max_grad_norm: -1
+      different_lr: {
+          enable: False
+          module_names: []
+          lr: 0.001 } }
+  scheduler: {
+      sched: cosine
+      epochs: 3
+      min_lr_multi: 0.25
+      warmup_epochs: 0.3 }
+  evaluate: False
+  deep_fusion: False
+  evaluation: {
+      eval_frame_ensemble: concat
+      eval_x_only: False
+      k_test: 128
+      eval_offload: True }
+  fp16: True
+  gradient_checkpointing: True
+  wandb: {
+      enable: False
+      entity: user
+      project: videochat2 }
+  dist_url: env://
+  device: cuda
+  mode: it
+  resume: False
+  debug: False
+  log_freq: 100
+  eval_freq: 5000
+  seed: 42
+  save_latest: True
+  auto_resume: True
+  pretrained_path: 
+  output_dir: output/7b_stage4
+  rank: 0
+  world_size: 1
+  gpu: 0
+  distributed: True
+  dist_backend: nccl }
+2024-02-18T22:28:53 | INFO | __main__ : train_file: [['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video'], ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video'], ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video'], ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video'], ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']]
+2024-02-18T22:28:53 | INFO | __main__ : Creating dataset for it
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/conversation/videochat1/train.json', 'data/WebVid10M', 'video']
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/conversation/videochat2/train.json', 'data/internvid-10s', 'video']
+2024-02-18T22:28:53 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/conversation/videochatgpt/train.json', 'data/ANet/activitynet_train_videos_video_chatgpt', 'video']
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/caption/videochat/train.json', 'data/WebVid10M', 'video']
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/reasoning/clevrer_qa/train.json', 'data/clevrer/video_train', 'video']
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/reasoning/clevrer_mc/train.json', 'data/clevrer/video_train', 'video']
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Load json file
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Random shuffle: True
+2024-02-18T22:28:54 | INFO | dataset.it_dataset : Use decord for data in ['data/anno/video/reasoning/next_qa/train.json', 'data/nextqa', 'video']
+2024-02-18T22:28:54 | INFO | tasks.shared_utils : Creating model
+2024-02-18T22:28:54 | INFO | models.videochat2_it_long : Add instruction in qformer: False
+2024-02-18T22:28:54 | INFO | models.blip2.vit : Num of patches: 3136
+2024-02-18T22:28:54 | INFO | models.blip2.vit : Use checkpoint: False
+2024-02-18T22:28:54 | INFO | models.blip2.vit : Checkpoint number: 0
+2024-02-18T22:28:55 | INFO | models.blip2.vit : Real runing depth: 23
+2024-02-18T22:28:55 | INFO | models.blip2.vit : Interpolate position embedding
+2024-02-18T22:28:55 | INFO | models.blip2.vit : Testing frame: 16
+2024-02-18T22:28:55 | INFO | models.blip2.vit : Checkpoint frame: 4
+2024-02-18T22:28:58 | INFO | models.blip2.vit : With LN: False
+2024-02-18T22:28:58 | INFO | models.blip2.vit : Total 24 layer
+2024-02-18T22:28:58 | INFO | models.blip2.vit : Return 23-th layer
+2024-02-18T22:29:00 | INFO | models.blip2.vit : No pretrained weights!!!
+2024-02-18T22:29:00 | INFO | models.blip2.blip2 : Drop_path:[0.0, 0.0181818176060915, 0.036363635212183, 0.05454545468091965, 0.072727270424366, 0.09090908616781235, 0.10909091681241989, 0.12727272510528564, 0.1454545557498932, 0.16363637149333954, 0.1818181872367859, 0.20000000298023224]
+2024-02-18T22:29:00 | INFO | models.blip2.blip2 : BertConfig {
+  "add_cross_attention": true,
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "cross_attention_freq": 2,
+  "drop_path_list": [
+    0.0,
+    0.0181818176060915,
+    0.036363635212183,
+    0.05454545468091965,
+    0.072727270424366,
+    0.09090908616781235,
+    0.10909091681241989,
+    0.12727272510528564,
+    0.1454545557498932,
+    0.16363637149333954,
+    0.1818181872367859,
+    0.20000000298023224
+  ],
+  "encoder_width": 1024,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "query_length": 32,
+  "transformers_version": "4.30.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+2024-02-18T22:29:02 | INFO | models.videochat2_it_long : Load ViT and QFormer from video_models/umt_l16_qformer.pth
+2024-02-18T22:29:03 | INFO | models.videochat2_it_long : _IncompatibleKeys(missing_keys=[], unexpected_keys=['vision_temp_embed', 'temp', 'vision_proj.weight', 'vision_proj.bias', 'text_proj.weight', 'text_proj.bias', 'itm_head.weight', 'itm_head.bias'])
+2024-02-18T22:29:03 | INFO | models.videochat2_it_long : Loading ViT and Q-Former Done
+2024-02-18T22:29:03 | INFO | models.videochat2_it_long : Add extra 64 tokens in QFormer
+2024-02-18T22:29:03 | INFO | models.videochat2_it_long : freeze vision encoder
+2024-02-18T22:29:03 | INFO | models.videochat2_it_long : freeze Qformer
+2024-02-18T22:29:03 | INFO | models.videochat2_it_long : Loading LLAMA
+2024-02-18T22:31:27 | INFO | models.videochat2_it_long : freeze LLAMA
+2024-02-18T22:31:27 | INFO | models.videochat2_it_long : Loading LLAMA Done
+2024-02-18T22:31:27 | INFO | models.videochat2_it_long : Use lora
+2024-02-18T22:31:41 | INFO | models.videochat2_it_long : Load VideoChat2 from: video_models/videochat2_7b_stage3.pth
+2024-02-18T22:31:42 | INFO | models.videochat2_it_long : _IncompatibleKeys(missing_keys=['llama_model.base_model.model.model.embed_tokens.weight', 'llama_model.base_model.model.model.layers.0.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.0.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.0.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.0.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.0.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.0.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.0.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.0.input_layernorm.weight', 'llama_model.base_model.model.model.layers.0.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.1.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.1.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.1.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.1.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.1.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.1.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.1.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.1.input_layernorm.weight', 'llama_model.base_model.model.model.layers.1.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.2.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.2.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.2.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.2.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.2.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.2.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.2.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.2.input_layernorm.weight', 'llama_model.base_model.model.model.layers.2.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.3.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.3.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.3.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.3.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.3.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.3.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.3.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.3.input_layernorm.weight', 'llama_model.base_model.model.model.layers.3.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.4.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.4.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.4.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.4.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.4.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.4.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.4.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.4.input_layernorm.weight', 'llama_model.base_model.model.model.layers.4.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.5.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.5.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.5.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.5.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.5.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.5.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.5.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.5.input_layernorm.weight', 'llama_model.base_model.model.model.layers.5.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.6.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.6.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.6.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.6.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.6.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.6.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.6.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.6.input_layernorm.weight', 'llama_model.base_model.model.model.layers.6.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.7.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.7.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.7.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.7.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.7.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.7.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.7.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.7.input_layernorm.weight', 'llama_model.base_model.model.model.layers.7.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.8.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.8.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.8.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.8.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.8.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.8.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.8.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.8.input_layernorm.weight', 'llama_model.base_model.model.model.layers.8.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.9.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.9.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.9.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.9.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.9.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.9.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.9.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.9.input_layernorm.weight', 'llama_model.base_model.model.model.layers.9.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.10.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.10.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.10.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.10.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.10.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.10.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.10.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.10.input_layernorm.weight', 'llama_model.base_model.model.model.layers.10.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.11.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.11.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.11.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.11.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.11.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.11.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.11.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.11.input_layernorm.weight', 'llama_model.base_model.model.model.layers.11.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.12.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.12.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.12.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.12.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.12.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.12.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.12.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.12.input_layernorm.weight', 'llama_model.base_model.model.model.layers.12.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.13.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.13.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.13.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.13.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.13.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.13.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.13.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.13.input_layernorm.weight', 'llama_model.base_model.model.model.layers.13.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.14.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.14.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.14.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.14.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.14.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.14.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.14.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.14.input_layernorm.weight', 'llama_model.base_model.model.model.layers.14.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.15.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.15.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.15.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.15.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.15.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.15.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.15.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.15.input_layernorm.weight', 'llama_model.base_model.model.model.layers.15.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.16.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.16.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.16.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.16.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.16.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.16.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.16.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.16.input_layernorm.weight', 'llama_model.base_model.model.model.layers.16.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.17.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.17.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.17.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.17.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.17.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.17.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.17.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.17.input_layernorm.weight', 'llama_model.base_model.model.model.layers.17.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.18.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.18.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.18.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.18.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.18.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.18.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.18.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.18.input_layernorm.weight', 'llama_model.base_model.model.model.layers.18.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.19.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.19.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.19.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.19.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.19.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.19.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.19.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.19.input_layernorm.weight', 'llama_model.base_model.model.model.layers.19.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.20.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.20.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.20.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.20.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.20.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.20.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.20.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.20.input_layernorm.weight', 'llama_model.base_model.model.model.layers.20.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.21.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.21.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.21.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.21.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.21.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.21.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.21.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.21.input_layernorm.weight', 'llama_model.base_model.model.model.layers.21.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.22.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.22.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.22.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.22.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.22.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.22.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.22.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.22.input_layernorm.weight', 'llama_model.base_model.model.model.layers.22.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.23.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.23.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.23.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.23.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.23.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.23.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.23.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.23.input_layernorm.weight', 'llama_model.base_model.model.model.layers.23.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.24.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.24.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.24.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.24.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.24.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.24.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.24.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.24.input_layernorm.weight', 'llama_model.base_model.model.model.layers.24.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.25.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.25.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.25.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.25.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.25.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.25.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.25.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.25.input_layernorm.weight', 'llama_model.base_model.model.model.layers.25.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.26.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.26.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.26.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.26.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.26.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.26.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.26.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.26.input_layernorm.weight', 'llama_model.base_model.model.model.layers.26.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.27.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.27.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.27.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.27.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.27.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.27.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.27.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.27.input_layernorm.weight', 'llama_model.base_model.model.model.layers.27.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.28.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.28.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.28.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.28.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.28.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.28.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.28.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.28.input_layernorm.weight', 'llama_model.base_model.model.model.layers.28.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.29.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.29.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.29.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.29.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.29.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.29.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.29.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.29.input_layernorm.weight', 'llama_model.base_model.model.model.layers.29.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.30.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.30.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.30.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.30.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.30.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.30.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.30.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.30.input_layernorm.weight', 'llama_model.base_model.model.model.layers.30.post_attention_layernorm.weight', 'llama_model.base_model.model.model.layers.31.self_attn.q_proj.weight', 'llama_model.base_model.model.model.layers.31.self_attn.k_proj.weight', 'llama_model.base_model.model.model.layers.31.self_attn.v_proj.weight', 'llama_model.base_model.model.model.layers.31.self_attn.o_proj.weight', 'llama_model.base_model.model.model.layers.31.mlp.gate_proj.weight', 'llama_model.base_model.model.model.layers.31.mlp.down_proj.weight', 'llama_model.base_model.model.model.layers.31.mlp.up_proj.weight', 'llama_model.base_model.model.model.layers.31.input_layernorm.weight', 'llama_model.base_model.model.model.layers.31.post_attention_layernorm.weight', 'llama_model.base_model.model.model.norm.weight', 'llama_model.base_model.model.lm_head.weight'], unexpected_keys=[])
+2024-02-18T22:31:45 | INFO | utils.optimizer : diff_names: [], diff_lr: None
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.extra_query_tokens: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.3.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.3.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.4.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.4.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.5.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.5.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.6.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.6.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.7.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.7.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.8.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.8.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.9.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.9.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.21.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.21.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.22.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.22.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.23.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.23.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.24.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.24.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.24.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.24.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.25.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.25.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.25.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.25.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.26.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.26.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.26.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.26.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.27.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.27.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.27.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.27.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.28.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.28.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.28.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.28.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.29.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.29.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.29.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.29.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.30.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.30.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.30.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.30.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.31.self_attn.q_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.31.self_attn.q_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.31.self_attn.v_proj.lora_A.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_model.base_model.model.model.layers.31.self_attn.v_proj.lora_B.default.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_proj.weight: wd: 0.02, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : param module.llama_proj.bias: wd: 0, lr: 2e-06
+2024-02-18T22:31:45 | INFO | utils.optimizer : optimizer -- lr=2e-06 wd=0.02 len(p)=130
+2024-02-18T22:31:45 | INFO | utils.optimizer : optimizer -- lr=2e-06 wd=0 len(p)=1
+2024-02-18T22:31:45 | INFO | tasks.shared_utils : Auto resuming
+2024-02-18T22:31:45 | INFO | tasks.shared_utils : Not found checkpoint in output/7b_stage4
+2024-02-18T22:31:45 | WARNING | tasks.shared_utils : No pretrained checkpoint provided, training from scratch
+2024-02-18T22:31:45 | INFO | __main__ : Start training
+2024-02-18T22:31:45 | INFO | __main__ : Start training epoch 0
+2024-02-18T22:31:45 | INFO | __main__ : eval_freq: 5000
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | INFO | dataset.dataloader : MetaLoader has 1 dataloaders, 150665 batches in total
+dataloader index=0 name=video, batch-size=1 length(#batches)=150665 
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:46 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:47 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:47 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:50 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  builtin_warn(*args, **kwargs)
+
+2024-02-18T22:31:50 | WARNING | py.warnings : /home/wangyu/work/LV-Chat/utils/distributed.py:18: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  builtin_warn(*args, **kwargs)
+
