@@ -1,0 +1,17 @@
+video_models
+output
+data
+logs/
+
+TACoS
+street-scene
+MVBench
+EgoSchema
+
+*.cache
+*.pkl
+*.png
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
