@@ -18,7 +18,7 @@ reasoning_clevrer_qa
 reasoning_clevrer_mc
 reasoning_next_qa
 ```
-To replicate our training for Frame Scalable Encoding (FSE), please download the datasets [Clevrer](http://clevrer.csail.mit.edu/), [NExT-QA](https://github.com/doc-doc/NExT-QA), [VideoChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT/tree/main/data), (WebVid-10M)[] as well as the json files from [VideoChat2-IT](https://huggingface.co/datasets/OpenGVLab/VideoChat2-IT/tree/main/video). 
+To replicate our training for Frame Scalable Encoding (FSE), please download the datasets [Clevrer](http://clevrer.csail.mit.edu/), [NExT-QA](https://github.com/doc-doc/NExT-QA), [VideoChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT/tree/main/data), [WebVid-10M](https://github.com/m-bain/webvid)(However, this dataset is no longer available) as well as the json files from [VideoChat2-IT](https://huggingface.co/datasets/OpenGVLab/VideoChat2-IT/tree/main/video). 
 Then we put all the datasets as the following structure: 
 ```
 - data
